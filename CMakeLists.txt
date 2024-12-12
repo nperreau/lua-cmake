@@ -2,12 +2,6 @@ cmake_minimum_required(VERSION 3.5)
 
 project(lua-cmake)
 
-if (WIN32)
-    add_definitions(LUA_USE_WINDOWS)
-elseif (UNIX)
-    add_definitions(LUA_USE_LINUX)
-endif ()
-
 add_library(lua STATIC
         lapi.c
         lapi.h
